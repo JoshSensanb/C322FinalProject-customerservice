@@ -31,14 +31,14 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public void update(@Valid @RequestBody Customer customer, @PathVariable int id){
         customer.setCustomerId(id);
         customerRepository.save(customer);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable int id){
         Customer customer = new Customer();
         customer.setCustomerId(id);
