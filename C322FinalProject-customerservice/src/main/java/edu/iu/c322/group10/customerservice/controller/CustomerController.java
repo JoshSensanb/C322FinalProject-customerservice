@@ -24,10 +24,11 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
-    public int create(Customer customer) {
-        Customer newCustomer = customerRepository.save(customer);
-        return newCustomer.getCustomerId();
+    @PostMapping("/add")
+    public int create(@RequestBody Customer customer) {
+        Customer c =customerRepository.save(customer);
+        return c.getCustomerId();
+
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
