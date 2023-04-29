@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://$postgres:0V8msdtxaVvfaBGzdZov@containers-us-west-78.railway.app:5560/railway
+    username: $containers-us-west-78.railway.app
+    password: 0V8msdtxaVvfaBGzdZov
+    name: railway
+    sql:
+      init:
+        mode: always
